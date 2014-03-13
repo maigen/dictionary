@@ -1,6 +1,7 @@
 class Term
 
   @@all_terms = []
+  @@all_definitions = []
 
   def initialize(word, definition)
     @word = word
@@ -29,5 +30,14 @@ class Term
     @@all_terms << self
   end
 
+  def Term.search(searchword)
+    # @search_word = searchword
+    Term.all.each do |term|
+      if term.word == searchword
+         return term.word
+        # i.word + " " + i.definition
+      end
+    end
+  end
 end
 

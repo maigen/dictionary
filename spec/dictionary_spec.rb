@@ -34,4 +34,14 @@ describe 'Term' do
     end
   end
 
+  describe '#search' do
+    it 'searches the all_terms array and returns the element whose key matches the search term' do
+      test_term = Term.create('gum', 'yummie')
+      # Term.search('gum')
+      # search_term = Term.all.each('gum')
+      Term.search('gum').should eq 'gum'
+    end
+  end
 end
+
+

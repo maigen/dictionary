@@ -106,17 +106,24 @@ end
 def search_menu
   puts "What word would you like to find the definition of?"
   search_term = gets.chomp
-  Term.all.each do |key|
-    if key.word == search_term
-      puts "\n\n Searching! ¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>\n\n"
-      puts key.word + ": " + key.definition
-      top_menu
-    elsif key.word != search_term
-      puts "\n\n٩(͡๏̯͡๏)۶\n\n"
-      puts "Sorry, we didn't find that word in this repository. How about entering it?\n\n"
-      enter_term
-    end
-  end
+  Term.search(search_term)
+  puts "\n\n Searching! ¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>\n\n"
+  if term.word == search_term
+    puts "Good news! The "
+
+
+
+  # Term.all.each do |key|
+  #   if key.word == search_term
+  #     puts "\n\n Searching! ¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>\n\n"
+  #     puts key.word + ": " + key.definition
+  #     top_menu
+  #   elsif key.word != search_term
+  #     puts "\n\n٩(͡๏̯͡๏)۶\n\n"
+  #     puts "Sorry, we didn't find that word in this repository. How about entering it?\n\n"
+  #     enter_term
+  #   end
+  # end
 end
 
 
