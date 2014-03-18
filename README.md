@@ -4,6 +4,4 @@ In this stupendous piece of programming, Maigen and Anne created a new dictionar
 
 Mind. Blown.
 
-Epic shit.
-
 also, it's only half functional at the moment. Stay tuned.
